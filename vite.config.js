@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-// https://vite.dev/config/
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    vue(), // vue插件
+    vueJsx() // vue-jsx插件
+  ],
 })
