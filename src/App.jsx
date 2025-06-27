@@ -2,7 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import styles from '@/test.module.css';  // 修改导入方式
+import user from '@/test.ts'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,12 +17,12 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1 className={styles.modulesClass}>Vite + React + {user.age}</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
+        <p className='testScss'>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
