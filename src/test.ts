@@ -6,4 +6,4 @@ export const user: User = {
   gender: 'Male'
 };
 
-export { User };
+export type { User };
