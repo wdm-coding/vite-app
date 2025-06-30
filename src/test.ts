@@ -1,13 +1,9 @@
-interface User {
-  name: string;
-  age: number;
-  gender: string;
-}
+import { User } from './types.ts';
 
-const user: User = {
+export const user: User = {
   name: 'John',
   age: 30,
   gender: 'Male'
 };
 
-export default user;
+export { User };
