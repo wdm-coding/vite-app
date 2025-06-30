@@ -23,5 +23,13 @@ export default defineConfig({
         autoprefixer()
       ]
     }
+  },
+  optimizeDeps: { // 优化依赖预构建配置
+    // include: ['vue', 'vue-router'] // 指定预构建依赖，提升打包速度
+    // exclude: ['vue-demi'] // 排除预构建依赖，提升打包速度
+    // exclude: ['lodash-es'] // 排除预构建依赖，提升打包速度
+  },
+  server:{
+    hmr: true, // 热更新模块替换功能，默认为true
   }
 })
