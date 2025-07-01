@@ -8,10 +8,12 @@
     "dev": "vite",
     "test": "vite --mode test",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node server/index.js"
   },
   "dependencies": {
     "crypto-js": "^4.2.0",
+    "express": "^5.1.0",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "rimraf": "^6.0.1",
