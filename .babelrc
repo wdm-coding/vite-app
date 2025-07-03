@@ -1,0 +1,7 @@
+{
+  "plugins": [
+    ["@babel/plugin-transform-runtime", {
+      "corejs": false  // 如需 polyfill 请设为 3
+    }]
+  ]
+}
