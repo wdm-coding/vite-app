@@ -1,29 +1,24 @@
 {
-  "name": "vite-rollup",
+  "name": "vite-esbuild",
   "version": "1.0.0",
-  "description": "学习rollup",
-  "main": "rollup.config.js",
+  "description": "esbuild 学习",
+  "main": "index.js",
   "scripts": {
-    "dev": "rollup --config rollup.config.js --environment NODE_ENV:development --environment mode:local --watch",
-    "build": "rollup --config rollup.config.js --environment NODE_ENV:production --environment mode:production"
+    "dev": "esbuild src/index.js --outfile=dist/index.js --watch",
+    "build": "esbuild src/index.js --outfile=dist/prod.js --bundle",
+    "node":"esbuild src/index.js --outfile=dist/prod.js --platform=node",
+    "es":"esbuild src/index.js --outfile=dist/prod.js --bundle --format=esm",
+    "commonjs":"esbuild src/index.js --outfile=dist/prod.js --bundle --format=cjs"
   },
-  "author": "",
+  "keywords": [
+    "esbuild"
+  ],
+  "author": "wdm",
   "license": "ISC",
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.28.0",
-    "@rollup/plugin-alias": "^5.1.1",
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-commonjs": "^28.0.6",
-    "@rollup/plugin-eslint": "^9.0.5",
-    "@rollup/plugin-image": "^3.0.3",
-    "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-node-resolve": "^16.0.1",
-    "@rollup/plugin-strip": "^3.0.4",
-    "@rollup/plugin-terser": "^0.4.4"
+    "esbuild": "^0.25.5"
   },
   "dependencies": {
-    "@babel/runtime": "^7.27.6",
-    "react": "^19.1.0",
-    "rollup": "^4.44.1"
+    "react": "^19.1.0"
   }
 }

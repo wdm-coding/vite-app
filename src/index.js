@@ -1,8 +1,9 @@
-import path from 'path'
-import {funA} from '@/ignore.js'
-import testJson from '@/test.json'
-import React from 'react'
-import url from '@/assets/logo.jpeg'
-console.log(React,url)
-funA()
-console.log('hello rollup666',testJson,path.join(__dirname,'src'))
+import React from "react"
+const div = React.createElement("div", null, "Hello React!")
+import logo from './assets/logo.jpeg'
+function fun(){
+  console.log("hello esBuild",logo)
+}
+fun()
+
+export default fun
